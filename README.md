@@ -1,5 +1,5 @@
 # phx.test
-Mix task for running specific tests via `mix test` (ex_unit) and `mix watch` ([extension](https://github.com/lpil/mix-test.watch)) fast.   
+Mix task for running specific tests via `mix test` (ex_unit) and `mix watch` ([mix-test.watch](https://github.com/lpil/mix-test.watch)) more conveniently.   
 
 Let's admit it, we're all lazy and running specific tests in a [phoenix](https://github.com/phoenixframework/phoenix) project can be a bit of a hassle when specifying the full path. I for one, would prefer to strip the boilerplate text from the command. So, here's a fitting library.
 
@@ -39,4 +39,12 @@ idea:  The phx.test and phx.watch are just aliases that
        you are generating are composed like this:
        $ mix phx.test c user 12
        $ mix test /test/controllers/user_controller_test.exs:12
+```
+
+Hint: You can access nested tests by putting the path in the name parameter:
+```
+$ mix phx.test c device/mobile 11
+
+# Will become
+$ mix test test/myapp_web/controllers/device/mobile_controller_test.exs:11
 ```
