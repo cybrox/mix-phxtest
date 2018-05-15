@@ -14,7 +14,7 @@ defmodule Phxtest do
     name = Enum.at(params, 1)
     line = Enum.at(params, 2)
 
-    if type == "help" do
+    if Enum.member?(["help", nil], type) do
       show_usage_information()
     else
       generate_command(command, type, name, line)
