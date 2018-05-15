@@ -4,37 +4,37 @@ defmodule PhxtestTest do
 
   test "Raises an error when not enough arguments are passed" do
     assert_raise(Mix.Error, "No module name given. Check out mix phx.test help for more information", fn ->
-      Mix.Tasks.Phx.Test.run(["c"])
+      Phxtest.run_command(:test, ["c"])
     end)
   end
 
   test "Raises an error when an invalid type is passed" do
     assert_raise(Mix.Error, "Invalid type given. Check out mix phx.test help for more information", fn ->
-      Mix.Tasks.Phx.Test.run(["o", "user"])
+      Phxtest.run_command(:test, ["o", "user"])
     end)
   end
 
   test "Generates proper path for user controller" do
-    assert "test/phxtest_web/controllers/user_controller_test.exs" == Mix.Tasks.Phx.Test.run(["c", "user"])
+    assert "test/phxtest_web/controllers/user_controller_test.exs" == Phxtest.create_test_path("c", "user")
   end
 
   test "Generates proper path for user controller with line" do
-    assert "test/phxtest_web/controllers/user_controller_test.exs:12" == Mix.Tasks.Phx.Test.run(["c", "user", "12"])
+    assert "test/phxtest_web/controllers/user_controller_test.exs:12" == Phxtest.create_test_path("c", "user", "12")
   end
 
   test "Generates proper path for user view" do
-    assert "test/phxtest_web/views/user_view_test.exs" == Mix.Tasks.Phx.Test.run(["v", "user"])
+    assert "test/phxtest_web/views/user_view_test.exs" == Phxtest.create_test_path("v", "user")
   end
 
   test "Generates proper path for user view with line" do
-    assert "test/phxtest_web/views/user_view_test.exs:33" == Mix.Tasks.Phx.Test.run(["v", "user", "33"])
+    assert "test/phxtest_web/views/user_view_test.exs:33" == Phxtest.create_test_path("v", "user", "33")
   end
 
   test "Generates proper path for auth plug" do
-    assert "test/phxtest_web/plug/auth_plug_test.exs" == Mix.Tasks.Phx.Test.run(["p", "auth"])
+    assert "test/phxtest_web/plug/auth_plug_test.exs" == Phxtest.create_test_path("p", "auth")
   end
 
   test "Generates proper path for auth plug with line" do
-    assert "test/phxtest_web/plug/auth_plug_test.exs:10" == Mix.Tasks.Phx.Test.run(["p", "auth", "10"])
+    assert "test/phxtest_web/plug/auth_plug_test.exs:10" == Phxtest.create_test_path("p", "auth", "10")
   end
 end

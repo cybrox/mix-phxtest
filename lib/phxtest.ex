@@ -58,10 +58,15 @@ defmodule Phxtest do
   def generate_command(command, type, name, line) when is_binary(name) do
     path = Phxtest.create_test_path(type, name, line)
     
-    if Mix.env() == :test do
-      path
-    else
-      # TODO: Execute command
+    case command do
+      :test ->
+        Mix.Tasks.Test.run([path])
+      :watch ->
+        if Code.ensure_compiled?(Mix.Tasks.Watch) do
+          Mix.Task.run("watch #{path}")
+        else
+          Mix.raise "You need to have lpil/mix-test.watch installed to use phx.watch"
+        end
     end
   end
 
