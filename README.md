@@ -11,9 +11,9 @@ $ mix test test/myapp_web/controllers/resource_controller.exs:12
 $ mix phxtest c resource 12
 ```
 
-Just add `phxtest` as a dependency to your project via [hex.pm](https://hex.pm/packages/mix_phxtest)    
+Just add `mix_phxtest` as a dependency to your project via [hex.pm](https://hex.pm/packages/mix_phxtest)    
 ```
-{:phxtest, "~> 0.1.0", only: [:test]}
+{:mix_phxtest, "~> 0.1.0", only: [:test]}
 ```
 
 ### Usage
