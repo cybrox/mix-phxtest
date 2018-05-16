@@ -13,7 +13,7 @@ $ mix phxtest c resource 12
 
 Just add `mix_phxtest` as a dependency to your project via [hex.pm](https://hex.pm/packages/mix_phxtest)    
 ```
-{:mix_phxtest, "~> 0.1.0", only: [:test]}
+{:mix_phxtest, "~> 0.2.0", only: [:test]}
 ```
 
 ### Usage
