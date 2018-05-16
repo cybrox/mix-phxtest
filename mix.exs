@@ -11,7 +11,7 @@ defmodule Phxtest.MixProject do
       description: description(),
       package: package(),
       deps: deps(),
-      name: "mix-phxtest",
+      name: "mix_phxtest",
       source_url: "https://github.com/cybrox/mix-phxtest"
     ]
   end
