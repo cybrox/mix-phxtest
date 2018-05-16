@@ -30,11 +30,7 @@ defmodule Phxtest.MixProject do
     """
     Mix task for running specific tests in your [phoenix](https://github.com/phoenixframework/phoenix) 
     project via `mix test` (ex_unit) and `mix watch` ([mix-test.watch](https://github.com/lpil/mix-test.watch)) 
-    more conveniently.   
-
-    Let's admit it, we're all lazy and running specific tests in a phoenix project can be a bit of a 
-    hassle when specifying the full path. I for one, would prefer to strip the boilerplate text from 
-    the command. So, here's a fitting library.
+    more conveniently.
     """
   end
 
