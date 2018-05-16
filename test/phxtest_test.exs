@@ -1,6 +1,5 @@
 defmodule PhxtestTest do
   use ExUnit.Case
-  doctest Phxtest
 
   test "Raises an error when not enough arguments are passed" do
     assert_raise(Mix.Error, "No module name given. Check out mix phx.test help for more information", fn ->

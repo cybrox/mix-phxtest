@@ -1,4 +1,4 @@
-defmodule Mix.Tasks.Phx.Test do
+defmodule Mix.Tasks.Phxtest do
   use Mix.Task
 
   @shortdoc "Build a phoenix compatible mix test command"

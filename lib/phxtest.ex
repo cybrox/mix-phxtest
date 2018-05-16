@@ -26,8 +26,8 @@ defmodule Phxtest do
   """
   def show_usage_information do
     Mix.shell.info """
-      Usage: mix phx.test <type> <name> [line]
-            mix phx.watch <type> <name> [line]
+      Usage: mix phxtest <type> <name> [line]
+            mix phxwatch <type> <name> [line]
 
       type:  c - controller (/test/myapp_web/controllers/)
             v - view       (/test/myapp_web/views/)
@@ -42,10 +42,10 @@ defmodule Phxtest do
             a single test. This is optional.
             
 
-      idea:  The phx.test and phx.watch are just aliases that
+      idea:  The phxtest and phxwatch are just aliases that
             perform simple string interpolation. The commands
             you are generating are composed like this:
-            $ mix phx.test c user 12
+            $ mix phxtest c user 12
             $ mix test /test/controllers/user_controller_test.exs:12
     """
   end
