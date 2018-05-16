@@ -29,14 +29,14 @@ defmodule Phxtest.MixProject do
 
   defp description do
     """
-    Mix task for running specific tests in your [phoenix](https://github.com/phoenixframework/phoenix) 
-    project via `mix test` (ex_unit) and `mix watch` ([mix-test.watch](https://github.com/lpil/mix-test.watch)) 
-    more conveniently.
+    Mix task for running specific tests in your phoenix project via 'mix test' (ex_unit) and 
+    'mix watch' (mix-test.watch, not included) more conveniently, using short path aliases.
     """
   end
 
   defp package do
     [
+      name: "mix_phxtest",
       maintainers: ["Sven Gehring"],
       licenses: ["MIT"],
       links: %{
