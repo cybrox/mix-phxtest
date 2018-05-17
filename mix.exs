@@ -4,7 +4,7 @@ defmodule Phxtest.MixProject do
   def project do
     [
       app: :mix_phxtest,
-      version: "0.2.1",
+      version: "0.2.2",
       elixir: "~> 1.6",
       build_embedded: false,
       start_permanent: false,

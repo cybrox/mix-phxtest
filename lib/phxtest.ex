@@ -62,8 +62,8 @@ defmodule Phxtest do
       :test ->
         Mix.Tasks.Test.run([path])
       :watch ->
-        if Code.ensure_compiled?(Mix.Tasks.Watch) do
-          Mix.Task.run("watch #{path}")
+        if Code.ensure_compiled?(Mix.Tasks.Test.Watch) do
+          Mix.Task.run("test.watch", ["#{path}"])
         else
           Mix.raise "You need to have lpil/mix-test.watch installed to use phx.watch"
         end
